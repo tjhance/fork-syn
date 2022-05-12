@@ -61,6 +61,8 @@ ast_enum! {
         ShlEq(Token![<<=]),
         /// The `>>=` operator
         ShrEq(Token![>>=]),
+        /// The `>>=` operator
+        Implies(Token![==>]),
     }
 }
 
@@ -94,6 +96,8 @@ pub mod parsing {
             input.parse().map(BinOp::Shl)
         } else if input.peek(Token![>>]) {
             input.parse().map(BinOp::Shr)
+        } else if input.peek(Token![==>]) {
+            input.parse().map(BinOp::Implies)
         } else if input.peek(Token![==]) {
             input.parse().map(BinOp::Eq)
         } else if input.peek(Token![<=]) {
@@ -217,6 +221,7 @@ mod printing {
                 BinOp::BitOrEq(t) => t.to_tokens(tokens),
                 BinOp::ShlEq(t) => t.to_tokens(tokens),
                 BinOp::ShrEq(t) => t.to_tokens(tokens),
+                BinOp::Implies(t) => t.to_tokens(tokens),
             }
         }
     }

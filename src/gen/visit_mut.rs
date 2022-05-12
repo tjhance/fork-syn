@@ -953,6 +953,9 @@ where
         BinOp::ShrEq(_binding_0) => {
             tokens_helper(v, &mut _binding_0.spans);
         }
+        BinOp::Implies(_binding_0) => {
+            tokens_helper(v, &mut _binding_0.spans);
+        }
     }
 }
 #[cfg(any(feature = "derive", feature = "full"))]

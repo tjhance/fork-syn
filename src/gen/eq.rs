@@ -106,6 +106,7 @@ impl PartialEq for BinOp {
             (BinOp::BitOrEq(_), BinOp::BitOrEq(_)) => true,
             (BinOp::ShlEq(_), BinOp::ShlEq(_)) => true,
             (BinOp::ShrEq(_), BinOp::ShrEq(_)) => true,
+            (BinOp::Implies(_), BinOp::Implies(_)) => true,
             _ => false,
         }
     }

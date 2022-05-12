@@ -726,6 +726,7 @@ define_punctuation! {
     "..="         pub struct DotDotEq/3   /// `..=`
     "="           pub struct Eq/1         /// `=`
     "=="          pub struct EqEq/2       /// `==`
+    "==>"         pub struct Implies/3    /// `==>`
     ">="          pub struct Ge/2         /// `>=`
     ">"           pub struct Gt/1         /// `>`
     "<="          pub struct Le/2         /// `<=`
@@ -844,6 +845,7 @@ macro_rules! export_token_macro {
             [...]         => { $crate::token::Dot3 };
             [..=]         => { $crate::token::DotDotEq };
             [=]           => { $crate::token::Eq };
+            [==>]         => { $crate::token::Implies };
             [==]          => { $crate::token::EqEq };
             [>=]          => { $crate::token::Ge };
             [>]           => { $crate::token::Gt };

@@ -317,6 +317,11 @@
           {
             "token": "ShrEq"
           }
+        ],
+        "Implies": [
+          {
+            "token": "Implies"
+          }
         ]
       }
     },
@@ -5535,6 +5540,7 @@
     "Gt": ">",
     "If": "if",
     "Impl": "impl",
+    "Implies": "==>",
     "In": "in",
     "LArrow": "<-",
     "Le": "<=",

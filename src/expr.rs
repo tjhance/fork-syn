@@ -1111,6 +1111,7 @@ pub(crate) mod parsing {
         Any,
         Assign,
         Range,
+        Implies,
         Or,
         And,
         Compare,
@@ -1150,6 +1151,7 @@ pub(crate) mod parsing {
                 | BinOp::BitOrEq(_)
                 | BinOp::ShlEq(_)
                 | BinOp::ShrEq(_) => Precedence::Assign,
+                | BinOp::Implies(_) => Precedence::Implies,
             }
         }
     }

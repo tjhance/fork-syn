@@ -173,6 +173,9 @@ impl Hash for BinOp {
             BinOp::ShrEq(_) => {
                 state.write_u8(27u8);
             }
+            BinOp::Implies(_) => {
+                state.write_u8(28u8);
+            }
         }
     }
 }

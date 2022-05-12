@@ -1,5 +1,5 @@
 [package]
-name = "syn"
+name = "verus-syn"
 version = "1.0.93" # don't forget to update html_root_url and syn.json
 authors = ["David Tolnay <dtolnay@gmail.com>"]
 license = "MIT OR Apache-2.0"

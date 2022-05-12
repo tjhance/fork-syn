@@ -222,6 +222,11 @@ impl Debug for BinOp {
                 formatter.field(v0);
                 formatter.finish()
             }
+            BinOp::Implies(v0) => {
+                let mut formatter = formatter.debug_tuple("Implies");
+                formatter.field(v0);
+                formatter.finish()
+            }
         }
     }
 }

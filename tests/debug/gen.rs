@@ -253,6 +253,10 @@ impl Debug for Lite<syn::BinOp> {
                 formatter.write_str("ShrEq")?;
                 Ok(())
             }
+            syn::BinOp::Implies(_val) => {
+                formatter.write_str("Implies")?;
+                Ok(())
+            }
         }
     }
 }

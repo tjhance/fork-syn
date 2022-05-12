@@ -1,4 +1,9 @@
-syn_dev::r#mod! {
+verus_syn_dev::r#mod! {
     // Write Rust code here and run `cargo check` to have Syn parse it.
 
+    fn main() {
+        let x = true;
+        let y = false;
+        let z = x && x ==> y || false;
+    }
 }
